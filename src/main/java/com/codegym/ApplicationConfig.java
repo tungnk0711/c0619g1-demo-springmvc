@@ -1,6 +1,10 @@
 package com.codegym;
 
 
+import com.codegym.repository.CustomerRepository;
+import com.codegym.repository.impl.CustomerRepositoryImpl;
+import com.codegym.service.CustomerService;
+import com.codegym.service.impl.CustomerServiceImpl;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -25,6 +29,16 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
+    }
+
+    @Bean
+    public CustomerRepository customerRepository(){
+        return new CustomerRepositoryImpl();
+    }
+
+    @Bean
+    public CustomerService customerService(){
+        return new CustomerServiceImpl();
     }
 
     //Thymeleaf Configuration
