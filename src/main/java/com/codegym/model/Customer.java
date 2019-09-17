@@ -4,13 +4,17 @@ public class Customer {
 
     private int id;
     private String name;
+    private String address;
+    private String gender;
 
     public Customer() {
     }
 
-    public Customer(int id, String name) {
+    public Customer(int id, String name, String address, String gender) {
         this.id = id;
         this.name = name;
+        this.gender = gender;
+        this.address = address;
     }
 
     public int getId() {
@@ -27,5 +31,21 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }

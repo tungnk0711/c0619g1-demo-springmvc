@@ -12,6 +12,7 @@
         <div class="product-item">
             <p th:text="${customer.id}"></p>
             <p th:text="${customer.name}"></p>
+            <p><a th:href="@{/customer/edit-customer/__${customer.id}__}">Edit</a></p>
         </div>
     </div>
 </div>

@@ -11,11 +11,11 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     List<Customer> customerList = new ArrayList<>();
 
     {
-        customerList.add(new Customer(1, "Long"));
-        customerList.add(new Customer(2, "Hoang"));
-        customerList.add(new Customer(3, "Phong"));
-        customerList.add(new Customer(4, "Binh"));
-        customerList.add(new Customer(5, "Dai"));
+        customerList.add(new Customer(1, "Long","Ha Noi", "Nam"));
+        customerList.add(new Customer(2, "Hoang","Ha Long", "Nam"));
+        customerList.add(new Customer(3, "Phong","Hai Duong", "Nam"));
+        customerList.add(new Customer(4, "Binh", "Hai Phong", "Nu"));
+        customerList.add(new Customer(5, "An", "Nam Dinh", "Nu"));
     }
 
 
