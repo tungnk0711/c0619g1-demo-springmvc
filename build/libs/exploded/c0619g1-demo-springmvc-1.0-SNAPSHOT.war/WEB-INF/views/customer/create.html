@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1 class="title">Create Customer</h1>
-<form th:action="@{/customer/save-customer}" th:object="${customer}" method="post">
+<form th:action="@{/customer/save-customer}" th:object="${customer}" method="post" enctype="multipart/form-data">
     <table>
         <tr>
             <td>Id:</td>
@@ -15,6 +15,10 @@
         <tr>
             <td>Name:</td>
             <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td>Image:</td>
+            <td><input type="file" th:field="*{avatar}"/></td>
         </tr>
         <tr>
             <td>Address:</td>

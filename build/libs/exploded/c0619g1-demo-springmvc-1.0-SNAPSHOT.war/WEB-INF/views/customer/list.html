@@ -10,6 +10,7 @@
 <div>
     <div th:each="customer,iterStat : ${customers}" th:class="${iterStat.odd}? 'odd'">
         <div class="product-item">
+            <img width="150px" height="150px" th:src="@{'/i/' + ${customer.avatar}}">
             <p th:text="${customer.id}"></p>
             <p th:text="${customer.name}"></p>
             <p><a th:href="@{/customer/edit-customer/__${customer.id}__}">Edit</a></p>
